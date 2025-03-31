@@ -85,7 +85,7 @@ elif navigation == "Predictor de Consumo de Combustible":
 
     st.subheader("¿Cómo funciona?")
     st.write("""
-    Este sistema utiliza datos la distancia recorrida, el tipo de vehículo y el tipo de combustible para predecir el consumo.
+    Este sistema utiliza datos la distancia recorrida, tiempo de recorrido y el tiempo de aire acondicionado para predecir el consumo.
     """)
 
     st.subheader("Beneficios")

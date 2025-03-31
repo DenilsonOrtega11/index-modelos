@@ -51,10 +51,11 @@ if navigation == "Detector de Estado de Neumáticos":
     - Análisis de imágenes.
     """)
 
-    # Botón para redirigir a la otra sección
-    if st.button("Ir a Predictor de Consumo de Combustible"):
-        navigation = "Predictor de Consumo de Combustible"
-        st.experimental_rerun()
+    # Enlace para redirigir al modelo de neumáticos
+    st.markdown(
+        "[Ir al Detector de Estado de Neumáticos](https://estadoneu-dyosb9wwmnc7h3uixb6bvh.streamlit.app/)", 
+        unsafe_allow_html=True
+    )
 
 # Sección: Predictor de Consumo de Combustible
 elif navigation == "Predictor de Consumo de Combustible":
@@ -85,12 +86,12 @@ elif navigation == "Predictor de Consumo de Combustible":
     - Optimización de rutas.
     """)
 
-    # Botón para redirigir a la otra sección
-    if st.button("Ir a Detector de Estado de Neumáticos"):
-        navigation = "Detector de Estado de Neumáticos"
-        st.experimental_rerun()
+    # Enlace para redirigir al predictor de consumo de combustible
+    st.markdown(
+        "[Ir al Predictor de Consumo de Combustible](https://consumo-9ja385zt2x7wx5br7vk5tk.streamlit.app/)", 
+        unsafe_allow_html=True
+    )
 
 # Footer
 st.markdown("---")
 st.write("Desarrollado por: Denilson Ortega Jimenez")
-

@@ -3,6 +3,19 @@ import streamlit as st
 # Configuración de la página
 st.set_page_config(page_title="Sistema de Predicción", page_icon="🚗", layout="wide")
 
+# Función para personalizar el fondo
+def set_background_color(color):
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-color: {color};
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
 # Título principal
 st.title("Sistema de Predicción para Transporte")
 
@@ -11,6 +24,9 @@ navigation = st.sidebar.selectbox("Selecciona un sistema", ("Detector de Estado 
 
 # Sección: Detector de Estado de Neumáticos
 if navigation == "Detector de Estado de Neumáticos":
+    # Establecer fondo específico para esta sección
+    set_background_color("#f2f2f2")  # Fondo gris claro
+
     st.header("Detector de Estado de Neumáticos")
     st.write("""
     El detector de estado de neumáticos utiliza imágenes para identificar posibles fallos, desgaste irregular o baja presión en los neumáticos.
@@ -35,8 +51,16 @@ if navigation == "Detector de Estado de Neumáticos":
     - Análisis de imágenes.
     """)
 
+    # Botón para redirigir a la otra sección
+    if st.button("Ir a Predictor de Consumo de Combustible"):
+        navigation = "Predictor de Consumo de Combustible"
+        st.experimental_rerun()
+
 # Sección: Predictor de Consumo de Combustible
 elif navigation == "Predictor de Consumo de Combustible":
+    # Establecer fondo específico para esta sección
+    set_background_color("#e1f7d5")  # Fondo verde claro
+
     st.header("Predictor de Consumo de Combustible")
     st.write("""
     El predictor de consumo de combustible estima el consumo de combustible en vehículos de carga utilizando datos del vehículo y de la ruta.
@@ -61,6 +85,12 @@ elif navigation == "Predictor de Consumo de Combustible":
     - Optimización de rutas.
     """)
 
+    # Botón para redirigir a la otra sección
+    if st.button("Ir a Detector de Estado de Neumáticos"):
+        navigation = "Detector de Estado de Neumáticos"
+        st.experimental_rerun()
+
 # Footer
 st.markdown("---")
-st.write("Desarrollado por: Tu nombre o tu empresa")
+st.write("Desarrollado por: Denilson Ortega Jimenez")
+

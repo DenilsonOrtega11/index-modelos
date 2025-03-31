@@ -46,7 +46,7 @@ if navigation == "Detector de Estado de Neumáticos":
     # Sección con fondo oscuro para esta parte
     st.header("Detector de Estado de Neumáticos")
     st.write(""" 
-    El detector de estado de neumáticos utiliza imágenes para identificar posibles fallos, desgaste irregular o baja presión en los neumáticos.
+    El detector de estado de neumáticos utiliza imágenes para identificar posibles fallos o desgaste irregular en los neumáticos.
     Utiliza un modelo de aprendizaje automático que analiza las imágenes para detectar problemas y proporciona recomendaciones para el mantenimiento.
     """)
 

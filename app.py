@@ -80,17 +80,16 @@ elif navigation == "Predictor de Consumo de Combustible":
     st.header("Predictor de Consumo de Combustible")
     st.write("""
     El predictor de consumo de combustible estima el consumo de combustible en vehículos de carga utilizando datos del vehículo y de la ruta.
-    Basado en datos como el peso de la carga, la distancia y el tipo de vehículo, predice el consumo de combustible y permite optimizar las rutas.
+    Basado en datos como la distancia y el tipo de vehículo, predice el consumo de combustible.
     """)
 
     st.subheader("¿Cómo funciona?")
     st.write("""
-    Este sistema utiliza datos como el peso de la carga, la distancia recorrida, el tipo de vehículo y el tipo de combustible para predecir el consumo.
+    Este sistema utiliza datos la distancia recorrida, el tipo de vehículo y el tipo de combustible para predecir el consumo.
     """)
 
     st.subheader("Beneficios")
     st.write("""
-    - **Optimización de rutas**: Reduce el consumo al elegir las mejores rutas.
     - **Control de costos**: Ayuda a gestionar el consumo de combustible.
     - **Sostenibilidad**: Minimiza el impacto ambiental al reducir el consumo de combustible.
     """)

@@ -3,18 +3,37 @@ import streamlit as st
 # Configuración de la página
 st.set_page_config(page_title="Sistema de Predicción", page_icon="🚗", layout="wide")
 
-# Función para personalizar el fondo
-def set_background_color(color):
+# Función para personalizar el fondo y colores
+def set_dark_theme():
     st.markdown(
         f"""
         <style>
         .stApp {{
-            background-color: {color};
+            background-color: #2e2e2e;
+            color: #ffffff;
+        }}
+        .sidebar .sidebar-content {{
+            background-color: #2e2e2e;
+            color: #ffffff;
+        }}
+        .stButton > button {{
+            background-color: #4a4a4a;
+            color: white;
+            border: 1px solid #2e2e2e;
+        }}
+        .stButton > button:hover {{
+            background-color: #555555;
+        }}
+        .stMarkdown {{
+            color: white;
         }}
         </style>
         """,
         unsafe_allow_html=True,
     )
+
+# Establecer el tema oscuro
+set_dark_theme()
 
 # Título principal
 st.title("Sistema de Predicción para Transporte")
@@ -24,11 +43,9 @@ navigation = st.sidebar.selectbox("Selecciona un sistema", ("Detector de Estado 
 
 # Sección: Detector de Estado de Neumáticos
 if navigation == "Detector de Estado de Neumáticos":
-    # Establecer fondo específico para esta sección
-    set_background_color("#f2f2f2")  # Fondo gris claro
-
+    # Sección con fondo oscuro para esta parte
     st.header("Detector de Estado de Neumáticos")
-    st.write("""
+    st.write(""" 
     El detector de estado de neumáticos utiliza imágenes para identificar posibles fallos, desgaste irregular o baja presión en los neumáticos.
     Utiliza un modelo de aprendizaje automático que analiza las imágenes para detectar problemas y proporciona recomendaciones para el mantenimiento.
     """)
@@ -59,9 +76,7 @@ if navigation == "Detector de Estado de Neumáticos":
 
 # Sección: Predictor de Consumo de Combustible
 elif navigation == "Predictor de Consumo de Combustible":
-    # Establecer fondo específico para esta sección
-    set_background_color("#e1f7d5")  # Fondo verde claro
-
+    # Sección con fondo oscuro para esta parte
     st.header("Predictor de Consumo de Combustible")
     st.write("""
     El predictor de consumo de combustible estima el consumo de combustible en vehículos de carga utilizando datos del vehículo y de la ruta.
